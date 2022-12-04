@@ -74,9 +74,6 @@ memtest.bin: memtest_shared.bin bootsect.pre.o setup.pre.o memtest.bin.lds
 reloc.o: reloc.c
 	$(CC) -c $(CFLAGS) -fno-strict-aliasing reloc.c
 
-test.o: test.c
-	$(CC) -c -Wall -march=i486 -m32 -O0 -fomit-frame-pointer -fno-builtin -ffreestanding -fno-strict-overflow test.c
-
 random.o: random.c
 	$(CC) -c -Wall -march=i486 -m32 -O3 -fomit-frame-pointer -fno-builtin -ffreestanding random.c
 
